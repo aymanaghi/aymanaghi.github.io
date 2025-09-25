@@ -16,6 +16,7 @@
     .card { background:#151821; padding:15px; border-radius:8px; margin:10px 0; opacity:0; transform:translateY(20px); transition:all 0.6s ease-out; }
     .card.visible { opacity:1; transform:translateY(0); }
     .btn { display:inline-block; background:#7c5cff; color:#fff; padding:8px 14px; border-radius:6px; margin-top:10px; text-decoration:none; }
+    ul { padding-left:20px; }
     footer { text-align:center; padding:20px; font-size:0.9em; color:#a7a7a7; }
   </style>
 </head>
@@ -29,13 +30,14 @@
         <a href="#security">Security</a>
         <a href="#linux">Linux</a>
         <a href="#creative">3D/Video</a>
+        <a href="#stack">Setup</a>
         <a href="#about">About</a>
       </div>
     </nav>
   </header>
 
   <section class="hero">
-    <h1>Hi, I’m Ayman 👋</h1>
+    <h1>Hi, I’m Ayman — aka Stinger 👾</h1>
     <p class="typewriter" id="type"></p>
   </section>
 
@@ -52,4 +54,81 @@
 
   <section id="security" class="card">
     <h2>Cybersecurity</h2>
-    <p>CTF write-ups, penetration
+    <p>CTF write-ups, penetration testing labs, and security insights I’ve explored.</p>
+  </section>
+
+  <section id="linux" class="card">
+    <h2>Linux Nerd Zone</h2>
+    <p>Dotfiles, scripts, and daily command-line magic. I live in the terminal.</p>
+  </section>
+
+  <section id="creative" class="card">
+    <h2>3D & Video Editing</h2>
+    <p>Blender animations and video edits — where creativity meets storytelling.</p>
+    <a class="btn" href="#">Watch Reel</a>
+  </section>
+
+  <section id="stack" class="card">
+    <h2>My Setup & Stack</h2>
+    <ul>
+      <li>💻 Distro: Arch Linux + i3wm</li>
+      <li>🛠 Dev Tools: VS Code, GitHub, Postman</li>
+      <li>🎨 Creative: Blender, DaVinci Resolve</li>
+      <li>🔐 Security: Burp Suite, TryHackMe, custom scripts</li>
+      <li>📈 Ads: Meta Ads Manager, Google Analytics</li>
+    </ul>
+  </section>
+
+  <section id="about" class="card">
+    <h2>About Me</h2>
+    <p>Multidisciplinary builder based in Minsk. I combine tech, security, marketing, and creativity to craft digital experiences.</p>
+    <p>Also known as <strong>Stinger</strong> in the gaming world. I blend code, creativity, and command-line wizardry.</p>
+    <p>Linux distro of choice: <strong>Arch Linux</strong> (btw 😏)</p>
+    <p>Telegram: <a href="https://t.me/yourhandle" target="_blank">@yourhandle</a></p>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Ayman — Built with ❤️ on Linux
+  </footer>
+
+  <script>
+    // Typing animation
+    const titles = ["Google Developer", "Ad Manager", "Cybersecurity Enthusiast", "Linux Nerd", "3D Artist", "aka Stinger 🎮"];
+    let i = 0, j = 0, current = "", isDeleting = false;
+    function type() {
+      const target = document.getElementById("type");
+      if (i < titles.length) {
+        if (!isDeleting && j <= titles[i].length) {
+          current = titles[i].substring(0, j++);
+        } else if (isDeleting && j >= 0) {
+          current = titles[i].substring(0, j--);
+        }
+        target.textContent = current;
+        if (!isDeleting && j === titles[i].length) {
+          isDeleting = true;
+          setTimeout(type, 1000);
+        } else if (isDeleting && j === 0) {
+          isDeleting = false;
+          i = (i + 1) % titles.length;
+          setTimeout(type, 300);
+        } else {
+          setTimeout(type, isDeleting ? 50 : 100);
+        }
+      }
+    }
+    type();
+
+    // Scroll fade-in
+    const cards = document.querySelectorAll('.card');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    });
+    cards.forEach(card => observer.observe(card));
+
+    // Year update
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
