@@ -1,3 +1,86 @@
+/* Base layout */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f1115;
+  color: #e6e6e6;
+  overflow-x: hidden;
+}
+
+header, section {
+  padding: 20px;
+}
+
+h1, h2 {
+  margin: 0 0 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #a7a7a7;
+  margin: 6px 12px;
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #fdd835;
+}
+
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero h1 {
+  font-size: 1.8em;
+}
+
+.typewriter {
+  font-size: 1.2em;
+  color: #fdd835;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Card layout */
+.card {
+  background: #151821;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 10px 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+  position: relative;
+  z-index: 1;
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+ul {
+  padding-left: 20px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #a7a7a7;
+}
+
+/* Bee-themed button (Nothing-style) */
 .bee-btn {
   background: transparent;
   border: 1px solid #fdd835;
@@ -20,4 +103,22 @@
 
 .bee-btn:active {
   transform: scale(0.98);
+}
+
+/* Floating bee animation */
+.bee {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Emoji_u1f41d.svg/32px-Emoji_u1f41d.svg.png');
+  background-size: cover;
+  animation: floatBee 12s infinite linear;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes floatBee {
+  0% { transform: translateY(0) translateX(0); opacity: 0.6; }
+  50% { transform: translateY(-100px) translateX(100px); opacity: 1; }
+  100% { transform: translateY(0) translateX(200px); opacity: 0.6; }
 }
