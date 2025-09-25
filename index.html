@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ayman — Portfolio</title>
+  <style>
+    body { margin:0; font-family:sans-serif; background:#0f1115; color:#e6e6e6; }
+    header, section { padding:20px; }
+    h1,h2 { margin:0 0 10px; }
+    nav { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; }
+    nav a { color:#a7a7a7; margin:6px 12px; text-decoration:none; font-size:0.9em; }
+    .hero { text-align:center; padding:40px 20px; }
+    .hero h1 { font-size:1.8em; }
+    .typewriter { font-size:1.2em; color:#7c5cff; font-weight:bold; margin-top:10px; }
+    .card { background:#151821; padding:15px; border-radius:8px; margin:10px 0; opacity:0; transform:translateY(20px); transition:all 0.6s ease-out; }
+    .card.visible { opacity:1; transform:translateY(0); }
+    .btn { display:inline-block; background:#7c5cff; color:#fff; padding:8px 14px; border-radius:6px; margin-top:10px; text-decoration:none; }
+    footer { text-align:center; padding:20px; font-size:0.9em; color:#a7a7a7; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <strong>Ayman</strong>
+      <div>
+        <a href="#dev">Dev</a>
+        <a href="#ads">Ads</a>
+        <a href="#security">Security</a>
+        <a href="#linux">Linux</a>
+        <a href="#creative">3D/Video</a>
+        <a href="#about">About</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Hi, I’m Ayman 👋</h1>
+    <p class="typewriter" id="type"></p>
+  </section>
+
+  <section id="dev" class="card">
+    <h2>Developer Projects</h2>
+    <p>Google Developer projects, APIs, and tools I’ve built to solve real-world problems.</p>
+    <a class="btn" href="#">View GitHub</a>
+  </section>
+
+  <section id="ads" class="card">
+    <h2>Ad Campaigns</h2>
+    <p>Portfolio ad manager work — boosting ROI, creative targeting, and campaign strategy.</p>
+  </section>
+
+  <section id="security" class="card">
+    <h2>Cybersecurity</h2>
+    <p>CTF write-ups, penetration
