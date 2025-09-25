@@ -1,21 +1,23 @@
-.nothing-btn {
+.bee-btn {
   background: transparent;
-  border: 1px solid #7c5cff;
-  color: #7c5cff;
+  border: 1px solid #fdd835;
+  color: #fdd835;
   padding: 10px 20px;
   border-radius: 8px;
   font-size: 1em;
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
   cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
 }
 
-.nothing-btn:hover {
-  background: #7c5cff;
-  color: #fff;
-  box-shadow: 0 0 10px #7c5cff80;
+.bee-btn:hover {
+  background: #fdd835;
+  color: #000;
+  box-shadow: 0 0 10px #fdd83580;
 }
 
-.nothing-btn:active {
+.bee-btn:active {
   transform: scale(0.98);
 }
