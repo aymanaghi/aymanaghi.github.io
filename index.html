@@ -7,6 +7,12 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Floating bees -->
+  <div class="bee" style="top:10%; left:5%; animation-delay:0s;"></div>
+  <div class="bee" style="top:30%; left:15%; animation-delay:2s;"></div>
+  <div class="bee" style="top:50%; left:25%; animation-delay:4s;"></div>
+  <div class="bee" style="top:70%; left:35%; animation-delay:6s;"></div>
+
   <header>
     <nav>
       <strong>Ayman</strong>
@@ -24,20 +30,20 @@
   </header>
 
   <section class="hero">
-    <h1>Hi, I’m Ayman — aka Stinger 👾</h1>
+    <h1>Hi, I’m Ayman — aka Stinger 🐝</h1>
     <p class="typewriter" id="type"></p>
   </section>
 
   <section id="dev" class="card">
     <h2>Developer Projects</h2>
     <p>Google Developer projects, scalable APIs, and tools I’ve built to solve real-world problems.</p>
-    <a class="nothing-btn" href="https://github.com/aymanaghi" target="_blank">View GitHub</a>
+    <a class="bee-btn" href="https://github.com/aymanaghi" target="_blank">View GitHub</a>
   </section>
 
   <section id="ads" class="card">
     <h2>Ad Campaigns</h2>
     <p>Creative strategy, ROI-focused campaigns, and digital presence management — including Google Maps optimization.</p>
-    <a class="nothing-btn" href="https://t.me/Stingerr961" target="_blank">Contact Me for Ads</a>
+    <a class="bee-btn" href="https://t.me/Stingerr961" target="_blank">Contact Me for Ads</a>
   </section>
 
   <section id="security" class="card">
@@ -70,14 +76,14 @@
   <section id="game" class="card">
     <h2>Play My Python Game</h2>
     <p>Download and run my 2048 game in Python — built for terminal play.</p>
-    <a class="nothing-btn" href="https://github.com/aymanaghi/ayman.github.io/blob/main/2048.py" target="_blank">📥 View 2048.py</a>
+    <a class="bee-btn" href="https://github.com/aymanaghi/ayman.github.io/blob/main/2048.py" target="_blank">📥 View 2048.py</a>
   </section>
 
   <section id="contact" class="card">
     <h2>Contact Me</h2>
-    <p>Need help with ads, creative strategy, or digital campaigns?</p>
-    <a class="nothing-btn" href="https://t.me/Stingerr961" target="_blank">📲 Message Me on Telegram</a>
-    <a class="nothing-btn" href="https://www.linkedin.com/in/ayman-naghi-832b33231" target="_blank">🔗 Connect on LinkedIn</a>
+    <p>Let’s swarm ideas — connect with me on LinkedIn 🐝</p>
+    <a class="bee-btn" href="https://t.me/Stingerr961" target="_blank">📲 Message Me on Telegram</a>
+    <a class="bee-btn" href="https://www.linkedin.com/in/ayman-naghi-832b33231" target="_blank">🔗 Connect on LinkedIn</a>
   </section>
 
   <footer>
@@ -85,7 +91,7 @@
   </footer>
 
   <script>
-    const titles = ["Google Developer", "Ad Manager", "Cybersecurity Enthusiast", "Linux Nerd", "3D Artist", "aka Stinger 🎮"];
+    const titles = ["Google Developer", "Ad Manager", "Cybersecurity Enthusiast", "Linux Nerd", "3D Artist", "aka Stinger 🐝"];
     let i = 0, j = 0, current = "", isDeleting = false;
     function type() {
       const target = document.getElementById("type");
