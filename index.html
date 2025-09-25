@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ayman — Portfolio</title>
+  <title>Ayman — aka Stinger</title>
   <style>
     body { margin:0; font-family:sans-serif; background:#0f1115; color:#e6e6e6; }
     header, section { padding:20px; }
@@ -31,7 +31,8 @@
         <a href="#linux">Linux</a>
         <a href="#creative">3D/Video</a>
         <a href="#stack">Setup</a>
-        <a href="#about">About</a>
+        <a href="#game">Game</a>
+        <a href="#contact">Contact</a>
       </div>
     </nav>
   </header>
@@ -44,7 +45,7 @@
   <section id="dev" class="card">
     <h2>Developer Projects</h2>
     <p>Google Developer projects, APIs, and tools I’ve built to solve real-world problems.</p>
-    <a class="btn" href="#">View GitHub</a>
+    <a class="btn" href="https://github.com/aymanaghi" target="_blank">View GitHub</a>
   </section>
 
   <section id="ads" class="card">
@@ -65,7 +66,7 @@
   <section id="creative" class="card">
     <h2>3D & Video Editing</h2>
     <p>Blender animations and video edits — where creativity meets storytelling.</p>
-    <a class="btn" href="#">Watch Reel</a>
+    <p>(Coming soon)</p>
   </section>
 
   <section id="stack" class="card">
@@ -79,20 +80,24 @@
     </ul>
   </section>
 
-  <section id="about" class="card">
-    <h2>About Me</h2>
-    <p>Multidisciplinary builder based in Minsk. I combine tech, security, marketing, and creativity to craft digital experiences.</p>
-    <p>Also known as <strong>Stinger</strong> in the gaming world. I blend code, creativity, and command-line wizardry.</p>
-    <p>Linux distro of choice: <strong>Arch Linux</strong> (btw 😏)</p>
-    <p>Telegram: <a href="https://t.me/@Stingerr961" target="_blank">@@Stingerr961</a></p>
+  <section id="game" class="card">
+    <h2>Play My Python Game</h2>
+    <p>Try out the 2048 game I built in Python — hosted in a separate file.</p>
+    <a class="btn" href="2048.html" target="_blank">🎮 Play 2048</a>
+  </section>
+
+  <section id="contact" class="card">
+    <h2>Contact Me</h2>
+    <p>Need help with ads, creative strategy, or digital campaigns?</p>
+    <a class="btn" href="https://t.me/Stingerr961" target="_blank">📲 Message Me on Telegram</a>
+    <a class="btn" href="https://www.linkedin.com/in/ayman-naghi-832b33231" target="_blank">🔗 Connect on LinkedIn</a>
   </section>
 
   <footer>
-    © <span id="year"></span> Ayman — Built with ❤️ on Linux
+    © <span id="year"></span> Ayman — Built with ❤️ on Arch Linux
   </footer>
 
   <script>
-    // Typing animation
     const titles = ["Google Developer", "Ad Manager", "Cybersecurity Enthusiast", "Linux Nerd", "3D Artist", "aka Stinger 🎮"];
     let i = 0, j = 0, current = "", isDeleting = false;
     function type() {
@@ -118,7 +123,6 @@
     }
     type();
 
-    // Scroll fade-in
     const cards = document.querySelectorAll('.card');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -127,7 +131,6 @@
     });
     cards.forEach(card => observer.observe(card));
 
-    // Year update
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
