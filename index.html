@@ -7,7 +7,14 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Floating bees -->
+  <!-- 🐝 Bee Loading Spinner -->
+  <div id="spinner">
+    <div class="bee-body"></div>
+    <div class="bee-wing left"></div>
+    <div class="bee-wing right"></div>
+  </div>
+
+  <!-- 🐝 Floating bees -->
   <div class="bee" style="top:10%; left:5%; animation-delay:0s;"></div>
   <div class="bee" style="top:30%; left:15%; animation-delay:2s;"></div>
   <div class="bee" style="top:50%; left:25%; animation-delay:4s;"></div>
@@ -23,7 +30,9 @@
         <a href="#linux">Linux</a>
         <a href="#creative">3D/Video</a>
         <a href="#stack">Setup</a>
-        <a href="#game">Game</a>
+        <a href="#brands">Brands</a>
+        <a href="#scraping">Scraping</a>
+        <a href="#crypto">Crypto</a>
         <a href="#contact">Contact</a>
       </div>
     </nav>
@@ -34,56 +43,89 @@
     <p class="typewriter" id="type"></p>
   </section>
 
-  <section id="dev" class="card">
-    <h2>Developer Projects</h2>
-    <p>Google Developer projects, scalable APIs, and tools I’ve built to solve real-world problems.</p>
-    <a class="bee-btn" href="https://github.com/aymanaghi" target="_blank">View GitHub</a>
+  <!-- Sections: Dev, Ads, Security, Linux, Creative, Setup -->
+  <!-- [Insert your existing cards here] -->
+
+  <!-- 🐝 Brands I Manage -->
+  <section id="brands" class="card">
+    <h2>Brands I Manage</h2>
+
+    <div class="biz-card">
+      <h3>Cake n Steak</h3>
+      <p>Cozy spot for desserts and grilled dishes.</p>
+      <a class="bee-btn" href="https://maps.app.goo.gl/ZfuZhcBE9DVoauRdA" target="_blank">📍 View on Maps</a>
+    </div>
+
+    <div class="biz-card">
+      <h3>Mr Advanced Windscreens</h3>
+      <p>Auto glass and windscreen repair specialists.</p>
+      <a class="bee-btn" href="https://maps.app.goo.gl/Rjk5ayLD19kow12t6" target="_blank">📍 View on Maps</a>
+    </div>
+
+    <div class="biz-card">
+      <h3>The SMILE Factory by Dr Jad Samad</h3>
+      <p>Dental care with a focus on aesthetics and smiles.</p>
+      <a class="bee-btn" href="https://maps.app.goo.gl/ndFZBiYCQuhcJfmE7" target="_blank">📍 View on Maps</a>
+    </div>
+
+    <div class="biz-card">
+      <h3>Mobile Coin</h3>
+      <p>Mobile accessories and tech gadgets.</p>
+      <a class="bee-btn" href="https://maps.app.goo.gl/h17co9pUtkENqLXw9" target="_blank">📍 View on Maps</a>
+    </div>
   </section>
 
-  <section id="ads" class="card">
-    <h2>Ad Campaigns</h2>
-    <p>Creative strategy, ROI-focused campaigns, and digital presence management — including Google Maps optimization.</p>
-    <a class="bee-btn" href="https://t.me/Stingerr961" target="_blank">Contact Me for Ads</a>
+  <!-- 🐝 Scraping Samples -->
+  <section id="scraping" class="card">
+    <h2>Scraping Samples</h2>
+
+    <div class="scrape-card">
+      <h3>
+        <img src="https://cryptologos.cc/logos/solana-sol-logo.svg?v=026" class="solana-icon">
+        Maps Profiles Scraping
+      </h3>
+      <p>Scrapes public business data from Google Maps profiles — name, rating, reviews, address, and contact info.</p>
+      <a class="bee-btn" href="https://github.com/aymanaghi/maps-scraper" target="_blank">🔗 View Sample</a>
+    </div>
   </section>
 
-  <section id="security" class="card">
-    <h2>Cybersecurity</h2>
-    <p>CTF write-ups, penetration testing labs, and Linux hardening experiments. I love breaking things to understand them.</p>
-  </section>
+  <!-- 🟪 Crypto Payments -->
+  <section id="crypto" class="card">
+    <h2>Crypto Payments</h2>
 
-  <section id="linux" class="card">
-    <h2>Linux Nerd Zone</h2>
-    <p>Dotfiles, scripts, and daily command-line workflows. I run Arch Linux + i3wm and live in the terminal.</p>
-  </section>
+    <div class="crypto-card">
+      <h3>
+        <img src="https://cryptologos.cc/logos/solana-sol-logo.svg?v=026" class="solana-icon">
+        Solana (SOL)
+      </h3>
+      <p>Send tips, donations, or payments via Solana using Phantom or any SPL-compatible wallet.</p>
+      <div class="wallet-box">
+        <code id="sol-address">6EMFdzT9K9E25ZgvyDDKdjMANLvgW1habY3zofTnFsBQ</code>
+        <button class="bee-btn" onclick="copySol()">📋 Copy Address</button>
+      </div>
+      <div class="qr-box">
+        <img src="YOUR_SOLANA_QR_IMAGE_PATH" class="qr-img">
+      </div>
+    </div>
 
-  <section id="creative" class="card">
-    <h2>3D & Video Editing</h2>
-    <p>Blender animations and DaVinci Resolve edits — where visual storytelling meets technical precision.</p>
-    <p>(Coming soon)</p>
-  </section>
-
-  <section id="stack" class="card">
-    <h2>My Setup & Stack</h2>
-    <ul>
-      <li>💻 Distro: Arch Linux + i3wm</li>
-      <li>🛠 Dev Tools: VS Code, GitHub, Postman</li>
-      <li>🎨 Creative: Blender, DaVinci Resolve</li>
-      <li>🔐 Security: Burp Suite, TryHackMe, custom scripts</li>
-      <li>📈 Ads: Meta Ads Manager, Google Analytics</li>
-    </ul>
-  </section>
-
-  <section id="game" class="card">
-    <h2>Play My Python Game</h2>
-    <p>Download and run my 2048 game in Python — built for terminal play.</p>
-    <a class="bee-btn" href="https://github.com/aymanaghi/ayman.github.io/blob/main/2048.py" target="_blank">📥 View 2048.py</a>
+    <div class="crypto-card">
+      <h3>
+        <img src="YOUR_WHISH_LOGO_PATH" class="solana-icon" style="background:#fff; border-radius:4px;">
+        Whish
+      </h3>
+      <p>Send payments via Whish Money — fast, secure, and mobile-friendly.</p>
+      <div class="qr-box">
+        <img src="YOUR_WHISH_QR_IMAGE_PATH" class="qr-img">
+      </div>
+    </div>
   </section>
 
   <section id="contact" class="card">
     <h2>Contact Me</h2>
-    <p>Let’s swarm ideas — connect with me on LinkedIn 🐝</p>
-    <a class="bee-btn" href="https://t.me/Stingerr961" target="_blank">📲 Message Me on Telegram</a>
-    <a class="bee-btn" href="https://www.linkedin.com/in/ayman-naghi-832b33231" target="_blank">🔗 Connect on LinkedIn</a>
+    <p>Let’s swarm ideas — connect with me on your favorite platform 🐝</p>
+    <a class="bee-btn" href="https://t.me/Stingerr961" target="_blank">📲 Telegram</a>
+    <a class="bee-btn" href="https://www.linkedin.com/in/ayman-naghi-832b33231" target="_blank">🔗 LinkedIn</a>
+    <a class="bee-btn" href="https://wa.me/447911123456" target="_blank">💬 WhatsApp</a>
   </section>
 
   <footer>
@@ -116,6 +158,13 @@
     }
     type();
 
+    function copySol() {
+      const address = document.getElementById("sol-address").textContent;
+      navigator.clipboard.writeText(address).then(() => {
+        alert("Solana address copied to clipboard!");
+      });
+    }
+
     const cards = document.querySelectorAll('.card');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -125,6 +174,10 @@
     cards.forEach(card => observer.observe(card));
 
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    window.addEventListener('load', () => {
+      document.getElementById('spinner').style.display = 'none';
+    });
   </script>
 </body>
 </html>
