@@ -1,66 +1,49 @@
-/* Base layout */
+/* 🐝 General Styles */
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
   background: #0f1115;
-  color: #e6e6e6;
-  overflow-x: hidden;
+  color: #eee;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-header, section {
-  padding: 20px;
-}
-
-h1, h2 {
-  margin: 0 0 10px;
-}
-
-nav {
+header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  background: #1a1d26;
+  padding: 10px 20px;
+  border-bottom: 1px solid #2c2f38;
 }
 
 nav a {
-  color: #a7a7a7;
-  margin: 6px 12px;
-  text-decoration: none;
-  font-size: 0.9em;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
   color: #fdd835;
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .hero {
   text-align: center;
-  padding: 40px 20px;
-}
-
-.hero h1 {
-  font-size: 1.8em;
+  padding: 60px 20px 30px;
 }
 
 .typewriter {
   font-size: 1.2em;
   color: #fdd835;
   font-weight: bold;
-  margin-top: 10px;
 }
 
-/* Card layout */
+/* 🐝 Card Layout */
 .card {
-  background: #151821;
-  padding: 15px;
+  background: #1a1d26;
+  border: 1px solid #2c2f38;
   border-radius: 8px;
-  margin: 10px 0;
+  padding: 20px;
+  margin: 20px;
   opacity: 0;
   transform: translateY(20px);
-  transition: all 0.6s ease-out;
-  position: relative;
-  z-index: 1;
+  transition: all 0.6s ease;
 }
 
 .card.visible {
@@ -68,107 +51,168 @@ nav a:hover {
   transform: translateY(0);
 }
 
-ul {
-  padding-left: 20px;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9em;
-  color: #a7a7a7;
-}
-
-/* Bee-themed button (Nothing-style) */
-.bee-btn {
-  background: transparent;
-  border: 1px solid #fdd835;
+.card h2 {
   color: #fdd835;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-size: 1em;
-  letter-spacing: 0.5px;
-  transition: all 0.3s ease;
+  margin-bottom: 10px;
+}
+
+/* 🐝 Buttons */
+.bee-btn {
+  background: #2c2f38;
+  color: #fdd835;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
   cursor: pointer;
+  font-weight: bold;
   text-decoration: none;
   display: inline-block;
 }
 
-.bee-btn:hover {
-  background: #fdd835;
-  color: #000;
-  box-shadow: 0 0 10px #fdd83580;
+/* 🐝 Biz Cards */
+.biz-card {
+  background: #121418;
+  border: 1px solid #2c2f38;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px 0;
 }
 
-.bee-btn:active {
-  transform: scale(0.98);
+.biz-card h3 {
+  margin: 0 0 6px;
+  color: #fdd835;
 }
 
-/* Floating bee animation */
-.bee {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Emoji_u1f41d.svg/32px-Emoji_u1f41d.svg.png');
-  background-size: cover;
-  animation: floatBee 12s infinite linear;
-  z-index: 0;
-  pointer-events: none;
+.biz-card p {
+  margin: 0 0 10px;
+  font-size: 0.95em;
+  color: #ccc;
 }
 
-@keyframes floatBee {
-  0% { transform: translateY(0) translateX(0); opacity: 0.6; }
-  50% { transform: translateY(-100px) translateX(100px); opacity: 1; }
-  100% { transform: translateY(0) translateX(200px); opacity: 0.6; }
+/* 🐝 Scraping Cards */
+.scrape-card {
+  background: #121418;
+  border: 1px solid #2c2f38;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px 0;
 }
 
-/* Bee loading spinner */
+.scrape-card h3 {
+  margin: 0 0 6px;
+  color: #fdd835;
+  display: flex;
+  align-items: center;
+}
+
+.scrape-card p {
+  margin: 0 0 10px;
+  font-size: 0.95em;
+  color: #ccc;
+}
+
+.solana-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+/* 🐝 Crypto Cards */
+.crypto-card {
+  background: #121418;
+  border: 1px solid #2c2f38;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px 0;
+}
+
+.crypto-card h3 {
+  margin: 0 0 6px;
+  color: #fdd835;
+  display: flex;
+  align-items: center;
+}
+
+.wallet-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.wallet-box code {
+  background: #2c2f38;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.95em;
+  color: #fdd835;
+}
+
+.qr-box {
+  margin-top: 10px;
+}
+
+.qr-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  border: 1px solid #2c2f38;
+}
+
+/* 🐝 Spinner + Bees */
 #spinner {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: fadeOut 2s ease forwards;
 }
 
 .bee-body {
   width: 30px;
-  height: 30px;
-  background: #fdd835;
+  height: 20px;
+  background: yellow;
   border-radius: 50%;
   position: relative;
-  animation: spin 1s linear infinite;
 }
 
 .bee-wing {
-  width: 20px;
-  height: 20px;
-  background: #fff;
+  width: 15px;
+  height: 15px;
+  background: white;
   border-radius: 50%;
   position: absolute;
-  top: -10px;
-  opacity: 0.7;
+  top: -5px;
 }
 
 .bee-wing.left {
-  left: -15px;
+  left: -10px;
 }
 
 .bee-wing.right {
-  right: -15px;
+  right: -10px;
 }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+.bee {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: yellow;
+  border-radius: 50%;
+  animation: buzz 10s infinite linear;
 }
 
-@keyframes fadeOut {
-  0% { opacity: 1; }
-  100% { opacity: 0; visibility: hidden; }
+@keyframes buzz {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* 🐝 Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.85em;
+  color: #888;
 }
