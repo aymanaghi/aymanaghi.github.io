@@ -1,4 +1,4 @@
-/* 🐝 General Styles */
+/* 🐝 Base Styles */
 body {
   background: #0f1115;
   color: #eee;
@@ -158,55 +158,7 @@ nav a {
   height: 120px;
   border-radius: 8px;
   border: 1px solid #2c2f38;
-}
-
-/* 🐝 Spinner + Bees */
-#spinner {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 999;
-}
-
-.bee-body {
-  width: 30px;
-  height: 20px;
-  background: yellow;
-  border-radius: 50%;
-  position: relative;
-}
-
-.bee-wing {
-  width: 15px;
-  height: 15px;
-  background: white;
-  border-radius: 50%;
-  position: absolute;
-  top: -5px;
-}
-
-.bee-wing.left {
-  left: -10px;
-}
-
-.bee-wing.right {
-  right: -10px;
-}
-
-.bee {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background: yellow;
-  border-radius: 50%;
-  animation: buzz 10s infinite linear;
-}
-
-@keyframes buzz {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
+  display: block;
 }
 
 /* 🐝 Footer */
